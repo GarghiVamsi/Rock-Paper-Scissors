@@ -20,29 +20,24 @@ while True:
     #prints the computer choice
     print("comp choice is", computer_choice)
 
-    while choice == 'rock':
-        if computer_choice == 'paper':
-            print ("you lose!")
-        elif computer_choice == 'scissors':
-            print ("You Win!")
-        elif computer_choice == 'rock':
-            print ("its a tie")
+    while choice == choice:
+        if computer_choice == choice:
+            print ("tie")
+        elif choice == "rock":
+            if computer_choice == "paper":
+                print ("You Lose!", computer_choice, "beats", choice)
+            else:
+                print("You win!", choice, "beats", computer_choice)
+        elif choice == "paper":
+            if computer_choice == "scissors":
+                print ("You Lose!", computer_choice, "beats", choice)
+            else:
+                print("You win!", choice, "beats", computer_choice)
+        elif choice == "scissors":
+            if computer_choice == "rock":
+                print ("You Lose!", computer_choice, "beats", choice)
+            else:
+                print("You win!", choice, "beats", computer_choice)
+        elif computer_choice != choice:
+            print("This input is invalid, please try again! Maybe check your spelling")
         break
-    while choice == 'paper':
-        if computer_choice == 'scissors':
-            print ("you lose!")
-        elif computer_choice == 'rock':
-            print ("You Win!")
-        elif computer_choice == 'paper':
-            print ("its a tie")
-        break
-    while choice == 'scissors':
-        if computer_choice == 'rock':
-            print ("you lose!")
-        elif computer_choice == 'paper':
-            print ("You Win!")
-        elif computer_choice == 'scissors':
-            print ("its a tie")
-        break
-
-    print( "This is the break point for the code so we can see when it loops and when it doesnt.")
